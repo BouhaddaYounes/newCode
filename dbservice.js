@@ -215,10 +215,10 @@ class DbService {
                 });
             });
 
-            // show all data
+            // Combine all data
             return {
                 totalTasks,
-                completedTasks: 0, // zidha nta
+                completedTasks: 0, // Placeholder for future implementation
                 pendingTasks: totalTasks,
                 highPriorityTasks: priorityDistribution.veryImportant,
                 priorityDistribution,

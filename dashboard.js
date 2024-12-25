@@ -1,5 +1,5 @@
 // Constants
-const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = 'http://localhost:5501/api';
 const isDebugMode = true; // Set to false in production
 
 // Check authentication on page load
@@ -197,6 +197,7 @@ function updateRecentActivity(tasks) {
     });
 }
 
+// Helper function to generate priority badges
 function getPriorityBadge(priority) {
     const priorityClass = (priority || '').replace(/\s+/g, '-').toLowerCase();
     const priorityColors = {
@@ -207,6 +208,7 @@ function getPriorityBadge(priority) {
     return `<span class="badge bg-${priorityColors[priorityClass] || 'secondary'} rounded-pill" aria-label="${priority || 'Unknown'}">${priority || 'Unknown'}</span>`;
 }
 
+// Helper function to generate status badges
 function getStatusBadge(completed) {
     return completed
         ? '<span class="badge bg-success status-badge" aria-label="Completed"><i class="bi bi-check-circle me-1"></i>Completed</span>'
